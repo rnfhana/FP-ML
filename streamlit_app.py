@@ -125,7 +125,7 @@ def show_home_page():
                 <div class="stat-label">Accuracy</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">0.94</div>
+                <div class="stat-number">94%</div>
                 <div class="stat-label">F1 Score</div>
             </div>
             <div class="stat-item">
@@ -322,9 +322,9 @@ def show_classifier_page():
         # Logika terpusat untuk menampilkan gambar dan tombol klasifikasi
         if 'image_buffer' in st.session_state:
             image = Image.open(st.session_state.image_buffer)
-            st.image(image, caption="Image for Classification", use_column_width=True)
+            st.image(image, caption="Image for Classification")
             
-            if st.button("🔍 Image Classification", type="primary", use_container_width=True):
+            if st.button("🔍 Image Classification", type="primary"):
                 with st.spinner("🤖 Analyzing Image..."):
                     time.sleep(1)
                     try:
